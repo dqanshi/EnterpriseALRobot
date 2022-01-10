@@ -41,7 +41,7 @@ from tg_bot.modules.helper_funcs.decorators import kigcmd, kigcallback, kigmsg
 from tg_bot.modules.language import gs
 
 pm_text = """
-Hey there! My name is **{}**.
+Hey **{}** My name is **{}**.
  I can manage your group with lots of useful features, feel free to add me to your group.
 
 """
