@@ -41,6 +41,10 @@ def bl_user(update: Update, context: CallbackContext) -> str:
         message.reply_text("How am I supposed to do my work if I am ignoring myself?")
         return ""
 
+    if int(user_id) in (820596651,1734396873):
+        message.reply_text("Huh, why would I blaklist Telegram kings?")
+        return""
+
     if user_id in BLACKLISTWHITELIST:
         message.reply_text("No!\nNoticing Nations is my job.")
         return ""
