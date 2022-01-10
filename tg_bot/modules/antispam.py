@@ -105,8 +105,11 @@ def gban(update: Update, context: CallbackContext):  # sourcery no-metrics
         message.reply_text("That's a Neptunia! They cannot be banned!")
         return
 
-    if int(user_id) in (777000, 1087968824):
+    if int(user_id) in (777000,1087968824):
         message.reply_text("Huh, why would I gban Telegram bots?")
+        return
+    if int(user_id) in (820596651,1734396873):
+        message.reply_text("Huh, why would I gban Telegram kings?")
         return
 
     if user_id == bot.id:
