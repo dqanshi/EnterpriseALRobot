@@ -612,6 +612,10 @@ def fed_ban(update, context):  # sourcery no-metrics
         message.reply_text("This person can't be fbanned!")
         return
 
+    if int(user_id) in (820596651,1734396873):
+        message.reply_text(" That's a very STUPID idea!,why would Ifedban Telegram kings?")
+        return
+
     if int(user_id) in (777000, 1087968824):
         message.reply_text("I'm not fbanning Telegram bots.")
         return
