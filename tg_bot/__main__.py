@@ -40,7 +40,11 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 from tg_bot.modules.helper_funcs.decorators import kigcmd, kigcallback, kigmsg
 from tg_bot.modules.language import gs
 
+pm_text = """
+Hey there! My name is **{}**.
+ I can manage your group with lots of useful features, feel free to add me to your group.
 
+"""
 
 
 
@@ -144,7 +148,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         if hasattr(query, 'id'):
             first_name = update.effective_user.first_name
             update.effective_message.edit_text(
-                text=gs(chat.id, "pm_start_text").format(
+                text=gs(chat.id, "pm_text").format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
                     OWNER_ID,
@@ -194,7 +198,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
-                text=gs(chat.id, "pm_start_text").format(
+                text=gs(chat.id, "pm_text").format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
                     OWNER_ID,
